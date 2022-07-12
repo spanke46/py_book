@@ -1,4 +1,8 @@
-first_name = input('Wahat is your first name?')
-last_name = input('What is your last name? ')
-full_name = f'Hello, {first_name} {last_name}'
-print(full_name.title())
+
+name = input('What is your name?')
+
+names = ['vicky','igor','pasha','masha']
+names.append(name)
+
+for guest in names:
+    print (f'Hello {guest.title()}, I glad to see you')
