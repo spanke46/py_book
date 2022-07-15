@@ -1,5 +1,3 @@
-#Нахождение куба
-x = range(1,11)
-for y in x:
-    c=y**3
-    print(c)
+#Генератор куба
+squares = [value**3 for value in range(1,11)]
+print(squares)
