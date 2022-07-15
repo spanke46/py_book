@@ -1,4 +1,4 @@
-y = range(1,1000001)
-print('min number ' + str(min(y)))
-print('max number ' + str(max(y)))
-print(sum(y))
+#не чётные числа
+x = range(1,21,2)
+for y in x:
+    print(y)
