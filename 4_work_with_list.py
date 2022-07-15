@@ -1,3 +1,4 @@
 y = range(1,1000001)
-for x in y:
-    print(x)
+print('min number ' + str(min(y)))
+print('max number ' + str(max(y)))
+print(sum(y))
