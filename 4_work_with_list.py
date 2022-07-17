@@ -1,3 +1,3 @@
-#Генератор кубов.Список первых 10 кубов
-squares = [value**3 for value in range (1,11)]
-print(squares)
+#Работа с сегментами
+food = ['pizza', 'burger', 'cake', 'bread', 'sup','falafel', 'carrot cake', 'cannoli', 'ice cream']
+print('«The first three items in the list are ' + f'{food[0:3]}')
