@@ -20,8 +20,8 @@ elif color.lower() == "red":
 else:
     print("Player doesn't  the points")
 """
-#Периоды жизни
-age = int(input("Enter age: "))
+#5.6 Периоды жизни
+"""age = int(input("Enter age: "))
 if age < 2:
     print("младенец")
 elif age== 2 or age==3:
@@ -34,3 +34,11 @@ elif age>=20 and age<65:
     print("Взрослый")
 else:
     print("Пожилой")
+"""
+#5.7 Любимый фрукт
+favorite_fruits=["apple","chery","orange"]
+fruits=input("Enter the fruit: ")
+if fruits.lower() in favorite_fruits:
+    print("Yes, I really like " +f'{fruits}')
+else:
+    print("No")
