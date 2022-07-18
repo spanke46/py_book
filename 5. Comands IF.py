@@ -23,8 +23,14 @@ else:
 #Периоды жизни
 age = int(input("Enter age: "))
 if age < 2:
-    print("Baby")
-elif age>= 2:
-    print('babe')
-elif age>=4:
-    print("Kid")
+    print("младенец")
+elif age== 2 or age==3:
+    print('малыш')
+elif age>=4 and age<13:
+    print("ребенок")
+elif age>=13 and age <20:
+    print("подросток")
+elif age>=20 and age<65:
+    print("Взрослый")
+else:
+    print("Пожилой")
