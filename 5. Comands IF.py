@@ -1,4 +1,4 @@
-#5.8
+"""""""#5.8
 list_users = ["admin","Erl","root","ted"]
 for users in list_users:
     if users=="admin":
