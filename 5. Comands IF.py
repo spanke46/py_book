@@ -1,10 +1,7 @@
-standard_toppings = ["mushrookms", "meat", "red peppers"]
-requested_toppings = []
-enter_topping=input("Enter name the topping: ")
-requested_toppings.append(enter_topping.lower())
-
-for requested_topping in requested_toppings:
-    if requested_topping in standard_toppings:
-        print("Added "+ requested_topping)
+#5.8
+list_users = ["admin","Erl","root","ted"]
+for users in list_users:
+    if users=="admin":
+        print("Hello admin , would you like to see a status report?")
     else:
-        print("Sorry, we don't have " + enter_topping)
+        print("Hello " + users + ", thank you for logging in again")
