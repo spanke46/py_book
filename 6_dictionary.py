@@ -1,34 +1,10 @@
-#6.5 
-'''human_0 = {
-    'Igor': 'Python',
-    'Lina': 'C#',
-    'Vicky': 'Java',
-    'Pasha': 'C++',
-    'Lida': 'C++',
-    'tolik': 'Java'
-    }
-for name, language  in  (human_0.items()):
-    print(name.title() + "'s favorite language is " + language.title())
-'''
-'''
-human_0 = {
-    'Igor': 'Python',
-    'Lina': 'C#',
-    'Vicky': 'Java',
-    'Pasha': 'C++',
-    'Lida': 'C++',
-    'tolik': 'Java'
-    }
-for name in  human_0:
-    print(name.title())
-'''
-human_0 = {
-    'Igor': 'Python',
-    'Lina': 'C#',
-    'Vicky': 'Java',
-    'Pasha': 'C++',
-    'Lida': 'C++',
-    'tolik': 'Java'
-    }
-for name in  human_0.values():
-    print(name.title())
+favorite_languages = {
+ 'jen': ['python', 'ruby'],
+ 'sarah': ['c'],
+ 'edward': ['ruby', 'go'],
+ 'phil': ['python', 'haskell'],
+ }
+for name, languages in favorite_languages.items():
+    print("\n" + name.title() + "'s favorite languages are:")
+    for language in languages:
+        print(language.title())
