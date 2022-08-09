@@ -1,7 +1,7 @@
 # импортируем нужные библиотеки
 import pyautogui as pg
 import keyboard
-
+import time
 # определим пустой список
 list_services = []
 
@@ -14,10 +14,30 @@ with open(u'c:\\py\services.txt','r') as file_object:
         list_services.append(currentPlace)
 
 def write():
-    # находим позицию курсора
-    position = (pg.position())
+
     for code in list_services:
-        pg.leftClick(position)
+        # находим позицию кнопки добавить
+        p_add = (pg.locateCenterOnScreen(r"C:\py\add.png"))
+        if p_add == None:
+            print(f' не нашло кнопку добавить , {p_add}')
+            break
+        # нажимаем на кнопку
+        pg.leftClick(p_add)
+        # паузе между выполнением
+        pg.PAUSE = 0.2
+        #находим кнопку поиска и смещаемся в лево в строку поиска
+        icon_search = (pg.locateCenterOnScreen(r"C:\py\MobaXterm_zHo41HMroK.png"))
+        if icon_search == None:
+            print('не нашло кнопку поиска')
+            break
+        pg.PAUSE = 0.3
+
+        pg.moveTo(icon_search, duration=0.1)
+        pg.move(-30, 0, duration=0.04)
+        time.sleep(0.04)
+        pg.leftClick()
+
+        #вводим значенение из списка
         pg.typewrite(str(code))
         pg.typewrite(['enter'])
         pg.PAUSE = 1
@@ -36,16 +56,6 @@ def write():
         pg.click(clicks=2)
         pg.PAUSE = 1
 
-        # находим позицию кнопки добавить
-        p_add = (pg.locateCenterOnScreen(r"C:\py\add2.png"))
-        if p_add == None:
-            print(f' не нашло кнопку добавить , {p_add}')
-            break
-        # нажимаем на кнопку
-        pg.moveTo(p_add, duration = 0.04)
-        pg.leftClick(p_add)
-        # паузе между выполнением
-        pg.PAUSE = 0.1
 
 # хот кей на запуск функции
 keyboard.add_hotkey('Alt + x', write)
