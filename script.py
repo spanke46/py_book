@@ -37,11 +37,12 @@ def write():
         pg.PAUSE = 1
 
         # находим позицию кнопки добавить
-        p_add = (pg.locateCenterOnScreen(r"C:\py\add2.png"))
+        p_add = (pg.locateCenterOnScreen(r"C:\py\MobaXterm_feMTaIqLIf.png"))
         if p_add == None:
-            print(f' не нашло кнопку добавить , {name_service}')
-
+            print(f' не нашло кнопку добавить , {p_add}')
+            break
         # нажимаем на кнопку
+        pg.moveTo(p_add, duration = 0.04)
         pg.leftClick(p_add)
         # паузе между выполнением
         pg.PAUSE = 0.1
@@ -50,6 +51,7 @@ def write():
 keyboard.add_hotkey('Alt + x', write)
 # без этого не работает =)
 keyboard.wait('Ctrl + Q')
+
 
 
 
