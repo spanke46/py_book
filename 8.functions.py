@@ -1,28 +1,42 @@
-
-'''#8.3 . Вызовите функцию с использованием позиционных аргументов
-# во второй раз с использованием именованных аргументов
-
-
-def make_shirt(size, text):
-    print(f"You have the shirt {size} size and this this text '{text}'")
-
-make_shirt(53,'Hello')
-make_shirt(text='Hello',size='53')
+'''
+#8.6. Названия городов
+def city_county(city, country):
+    full = f'{city}, {country}'
+    return full.title()
+a = city_county('odess', 'ukraine')
+print(a)
 '''
 
-'''#8-4
-
-def make_shirt(size='L', text='I love Python'):
-    print(f"You have the shirt {size} size and this this text '{text}'")
-
-
-make_shirt(size='XL', text='Hello')
+#8.7
 '''
-#8-5
+def make_album(name_album, name_artist, track):
+    album = {'album' : name_album, 'artist' : name_artist}
+    if track:
+        album['track'] = track
+    return album
+album_1 = make_album('Rock', 'Jovi', track = '1')
 
-def describe_city(city='Odessa', text='is my favorine city'):
-    print(f"{city} {text}")
+print(album_1)
+'''
+#8.8
 
-describe_city()
-describe_city(city='Kiev')
-describe_city(city='Lviv')
+def make_album(name_album, name_artist, track=''):
+    album = {'album' : name_album, 'artist' : name_artist}
+    if track:
+        album['track'] = track
+    return album
+album_1 = make_album('Rock', 'Jovi')
+
+while True:
+
+    print("\nPlease enter")
+    album_name = input("Album name: ")
+    if album_name == "q":
+        print("exit")
+        break
+    artist_name = input("Artist name: ")
+    if artist_name == "q":
+        print("exit")
+        break
+    formatted_name = make_album(album_name, artist_name)
+    print(f" This is {formatted_name}")
