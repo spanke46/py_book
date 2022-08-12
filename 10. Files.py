@@ -1,11 +1,17 @@
 
 
-file_path = 'c:\py\pi.txt'
 
-with open(file_path) as file_test:
-    string = file_test.read()
 
-print(string)
+#10.4
+file_path = 'c:\py\guest.txt'
 
-change = string.replace('Python', 'C#')
-print(change)
+while True:
+    name= input('Enter your name: ')
+    if name == 'q':
+        print('Exit')
+        break
+    else:
+        with open(file_path, 'a') as f_write:
+            print("Hello " + name)
+            f_write.write(name + '\n')
+
