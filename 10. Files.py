@@ -3,15 +3,9 @@
 
 
 #10.4
-file_path = 'c:\py\guest.txt'
-
-while True:
-    name= input('Enter your name: ')
-    if name == 'q':
-        print('Exit')
-        break
-    else:
-        with open(file_path, 'a') as f_write:
-            print("Hello " + name)
-            f_write.write(name + '\n')
-
+file_path = 'c:\py\pi.txt'
+with open(file_path, encoding='utf-8') as f_write:
+    content = f_write.read()
+word = content.split()
+num_words = len(word)
+print(num_words)
