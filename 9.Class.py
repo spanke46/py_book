@@ -16,7 +16,12 @@ class Restaurant():
 
 
 my_rest = Restaurant('Яхта', 'Европйской')
+my_rest2 = Restaurant('Моль', 'Итальянской')
+my_rest3 = Restaurant('Ахер', 'Узбекской')
 
 my_rest.describe_restaurant()
-my_rest.open_restaurant('открыт')
+my_rest2.describe_restaurant()
+my_rest3.describe_restaurant()
+
+
 
