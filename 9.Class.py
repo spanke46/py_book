@@ -1,27 +1,23 @@
 
-#9.1
-class Restaurant():
-    def  __init__ (self, restaurant_name, cuisine_type):
-        self.restaurant_name = restaurant_name
-        self.cuisine_type = cuisine_type
-        self.door = 'ав'
-    def describe_restaurant(self):
-        print("Добро пожаловать в наш ресторан  " + self.restaurant_name + " " + self.cuisine_type + " кухни"  )
+#9.3
 
-    def open_restaurant(self, s_door):
-        self.door = s_door
-        print('Ресторан ' + s_door)
+class User():
+    def __init__(self, first_name, last_name, city):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.city = city
+    def describe_user(self):
+        print(f"Основная информация: {self.first_name}  {self.last_name}  {self.city}")
 
+    def greet_user(self):
+        print(f"Привет  {self.first_name}  {self.last_name}")
+user_1 = User('igor', 'titor', 'odessa')
+user_2 = User('lina', 'ostin', 'kiev')
 
+user_1.describe_user()
+user_1.greet_user()
 
-
-my_rest = Restaurant('Яхта', 'Европйской')
-my_rest2 = Restaurant('Моль', 'Итальянской')
-my_rest3 = Restaurant('Ахер', 'Узбекской')
-
-my_rest.describe_restaurant()
-my_rest2.describe_restaurant()
-my_rest3.describe_restaurant()
-
+user_2.describe_user()
+user_2.greet_user()
 
 
