@@ -17,13 +17,19 @@ class User():
     def  increment_login_attempts(self, attempts=1):
         self.login_attempts += attempts
 
+    def  reset_login_attempts(self,res_attempts=1):
+        self.login_attempts -= res_attempts
+
 user_1 = User('igor', 'titor', 'odessa')
 user_2 = User('lina', 'ostin', 'kiev')
 
 user_1.describe_user()
 user_1.greet_user()
+
 user_1.increment_login_attempts()
 user_1.increment_login_attempts()
+user_1.reset_login_attempts()
+
 print(user_1.login_attempts)
 
 
