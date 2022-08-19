@@ -4,12 +4,12 @@ import keyboard
 
 # определим пустой список
 print('Скрипт запущен...')
-path = str(input("Введите путь к файлу:  "))
+#path = str(input("Введите путь к файлу:  "))
 print('Наведите курсор на строку поиска...')
 print('Нажмите  alt+x, чтобы начать')
 
 list_services = []
-#path = str("c:\\py\services.txt")
+path = str("c:\\py\services.txt")
 
 
 # открываем файл
@@ -30,7 +30,7 @@ def write():
         pg.PAUSE = 1
 
         # находим координаты названия услуги
-        name_service = (pg.locateCenterOnScreen(r"C:\py\name_service.png"))
+        name_service = pg.locateCenterOnScreen(r"C:\py\name_service.png", confidence=0.9)
         if name_service == None:
             print(f' не нашло название услуги ')
             break
@@ -44,7 +44,7 @@ def write():
         pg.PAUSE = 1
 
         # находим позицию кнопки добавить
-        p_add = (pg.locateCenterOnScreen(r"C:\py\add2.png"))
+        p_add = pg.locateCenterOnScreen(r"C:\py\add2.png", confidence=0.9)
         if p_add == None:
             print(f' не нашло кнопку добавить , {p_add}')
             break
